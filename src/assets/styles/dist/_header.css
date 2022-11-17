@@ -108,3 +108,9 @@
   background-color: #f2f3f6;
   opacity: 0.7;
 }
+
+.m-header-container {
+  border-top: 1px solid #eaebee;
+  height: 20vh;
+  color: #fff;
+}

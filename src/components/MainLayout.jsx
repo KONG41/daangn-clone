@@ -28,6 +28,16 @@ function MainLayout({ children }) {
           </div>
 
         </div>
+        <div className="container m-header-container">
+          <div className="sub-container">
+            <ul>
+              <li className="menu-item main-menu-item"><a href="#">중고거래</a></li>
+              <li className="menu-item"><a href="#">알바</a></li>
+              <li className="menu-item"><a href="#">부동산 직거래</a></li>
+            </ul>
+          </div>
+
+        </div>
       </section>
       {children}
       <section className="container footer-container">
