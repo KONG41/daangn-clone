@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+}
+
+.sub-container {
+  width: 60%;
+  margin: auto;
+}
+@media only screen and (max-width: 1370px) {
+  .sub-container {
+    width: 90%;
+  }
+}
