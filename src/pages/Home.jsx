@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import storyIcon3 from '../assets/images/content/icon-story-3-0a14d64c6101a7271655747d8401b9f71506578f8a4c0640608074e977bbc7c0.svg';
 import storyIcon2 from '../assets/images/content/icon-story-2-208bb88cad31e335b40bc8ac5b7684dcf8a36d77ac50770a497a9c967a3bfc4f.svg';
-import storyIcon1 from '../assets/images/content/icon-story-1-9226479b836cdc960291ffda91ace46c90a632f6cc868aa8983b3624e662a924.svg'
+import storyIcon1 from '../assets/images/content/icon-story-1-9226479b836cdc960291ffda91ace46c90a632f6cc868aa8983b3624e662a924.svg';
 function Home() {
   return (
 
@@ -89,15 +90,16 @@ function Home() {
             중고거래 인기매물
           </h1>
           <div className="cards-wrap">
+
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
                 </div>
                 <div className="card-desc">
                   <h2 className="card-title">iPhone 13 pro max 512G</h2>
-                  <div className="card-price ">
+                  <div className="card-price">
                     100,000원
                   </div>
                   <div className="card-region-name">
@@ -113,10 +115,10 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
@@ -139,10 +141,10 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
@@ -165,10 +167,10 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
@@ -191,10 +193,10 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
@@ -217,10 +219,10 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
@@ -243,10 +245,10 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
@@ -269,10 +271,10 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
             <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
+              <Link className="card-link " data-event-label="488826624" to="/product-detail">
                 <div className="card-photo ">
                   <img alt="iPhone 13 pro max 512G"
                     src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
@@ -295,7 +297,7 @@ function Home() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </article>
 
           </div>

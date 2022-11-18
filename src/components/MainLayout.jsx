@@ -1,43 +1,110 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
 import { AiFillApple, AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai';
 import { FaFacebook, FaBlogger } from 'react-icons/fa';
 import { MdOutlineLanguage } from 'react-icons/md';
 import { BiChevronDown, BiSearch } from 'react-icons/bi';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
+// menu function
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+// end of menu function
+
 function MainLayout({ children }) {
+  // hide show mobile menu
+  const [isNavBar, setIsNavBar] = useState(false);
+  const [isNavSearch, setIsNavSearch] = useState(false);
+  const handleHamburgerMenu = () => {
+    setIsNavBar(!isNavBar);
+    setIsNavSearch(false)
+  }
+  const handleNavSearch = () => {
+    setIsNavSearch(!isNavSearch);
+    setIsNavBar(false);
+  }
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+    window.addEventListener('resize', handleResize);
+    if (window.innerWidth > 830) {
+      setIsNavBar(false);
+      setIsNavSearch(false);
+    }
+    return () => window.removeEventListener('resize', handleResize);
+  }, [windowDimensions]);
+  // end of hide and show mobile menu 
+
+
+
   return (
     <div className="container">
       <section className="sticky-nav">
         <div className="sub-container sub-nav-container">
-          <div className="menu">
+          <div className="menu l-menu">
             <ul>
               <li className="logo-item">
-                <img src={require("../assets/images/logo/logo_01.png")} />
+                <Link to="/"><img src={require("../assets/images/logo/logo_01.png")} /></Link>
+
               </li>
-              <li className="menu-item main-menu-item"><a href="#">중고거래</a></li>
+              <li className="menu-item main-menu-item"><Link to="/">중고거래</Link></li>
               <li className="menu-item"><a href="#">알바</a></li>
               <li className="menu-item"><a href="#">부동산 직거래</a></li>
             </ul>
           </div>
-          <div className="search">
+          <div className="search m-search">
             <input type="text" placeholder="물품이나 동네를 검색해보세요" />
-            <span className="search-icon-btn"><BiSearch /></span>
+            <span className="search-icon-btn" onClick={handleNavSearch}><BiSearch /></span>
             <button type="button" className="search-btn">채팅하기</button>
-            <span className="menu-icon-btn"><GiHamburgerMenu /></span>
+            <span className="menu-icon-btn" onClick={handleHamburgerMenu}><GiHamburgerMenu /></span>
           </div>
 
         </div>
-        <div className="container m-header-container">
-          <div className="sub-container">
-            <ul>
-              <li className="menu-item main-menu-item"><a href="#">중고거래</a></li>
-              <li className="menu-item"><a href="#">알바</a></li>
-              <li className="menu-item"><a href="#">부동산 직거래</a></li>
-            </ul>
+        {
+          isNavBar &&
+          <div className="container m-header-container">
+            <div className="menu m-menu">
+              <ul>
+                <li className="menu-item main-menu-item"><a href="#">중고거래</a></li>
+                <li className="menu-item"><a href="#">알바</a></li>
+                <li className="menu-item"><a href="#">부동산 직거래</a></li>
+              </ul>
+            </div>
           </div>
+        }
+        {isNavSearch &&
+          <div className="container m-ab-menu">
+            <div className="m-search-container">
+              <div className="top-grid">
+                <input type="text" placeholder="물품이나 동네를 검색해보세요" />
+                <span onClick={handleNavSearch}>취소</span>
+              </div>
+              <div className={`bottom-grid ${isNavSearch && "bottom-grid-show"}`}>
+                <span className="sug-title">추천</span>
+                <div className="sug-table">
+                  <ul>
+                    <li>잠실 냉장고</li>
+                    <li>부산 책상</li>
+                    <li>죽전 치과</li>
+                    <li>죽전 자전거</li>
+                    <li>화분</li>
+                    <li>잠실 냉장고</li>
+                  </ul>
+                </div>
+              </div>
 
-        </div>
+            </div>
+          </div>
+        }
+
+
       </section>
       {children}
       <section className="container footer-container">

@@ -16,6 +16,10 @@ ul {
   padding: 0px;
 }
 
+h1 {
+  margin: 0;
+}
+
 .container {
   width: 100%;
 }
@@ -223,7 +227,7 @@ ul {
 }
 
 @media only screen and (max-width: 830px) {
-  .menu ul .menu-item {
+  .l-menu ul .menu-item {
     display: none;
   }
 }
@@ -291,8 +295,111 @@ ul {
 
 .m-header-container {
   border-top: 1px solid #eaebee;
-  height: 20vh;
   color: #fff;
+  transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+.m-menu ul {
+  width: 100%;
+  flex-direction: column;
+  gap: 0px;
+  margin: 0px;
+}
+.m-menu ul .menu-item :hover {
+  background-color: #f2f3f6;
+}
+.m-menu ul .menu-item a {
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 0px 15px 5%;
+  margin: 0px;
+}
+
+.m-ab-menu {
+  position: absolute;
+  top: 0;
+}
+
+.m-search-container {
+  padding: 15px 15px 0px 15px;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+.m-search-container .top-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.m-search-container .top-grid input {
+  line-height: 1.4;
+  font-size: 16px;
+  background-color: #f2f3f6;
+  box-sizing: border-box;
+  height: 2.5rem;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  color: #212124;
+  margin-right: 1rem;
+  width: 100%;
+}
+.m-search-container .top-grid input:focus-visible {
+  outline-offset: 0px;
+}
+.m-search-container .top-grid input:focus {
+  outline: none;
+}
+.m-search-container .top-grid span {
+  line-height: 1.36;
+  color: #212124;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.m-search-container .bottom-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  transform: translateY(-1.6rem);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.1s;
+  padding: 8px 0px;
+  box-sizing: border-box;
+}
+.m-search-container .bottom-grid .sug-title {
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 0;
+  padding-bottom: 0.4rem;
+  padding-left: 0;
+  color: #868b94;
+}
+.m-search-container .bottom-grid .sug-table ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.m-search-container .bottom-grid .sug-table ul li {
+  line-height: 1.4;
+  outline: 0;
+  margin: 0;
+  width: 50%;
+  padding: 16px 0;
+  border-bottom: 1px solid #eaebee;
+  cursor: pointer;
+  list-style: none;
+}
+.m-search-container .bottom-grid .sug-table ul li:last-child, .m-search-container .bottom-grid .sug-table ul li:nth-last-child(2) {
+  border-bottom: none;
+}
+.m-search-container .bottom-grid-show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .right-img-container, .left-img-container {
@@ -599,4 +706,174 @@ ul {
   .left-img .image {
     width: 100%;
   }
+}
+.product-container {
+  width: 36%;
+  padding: 48px 0px;
+}
+@media only screen and (max-width: 1370px) {
+  .product-container {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .product-container {
+    width: 80%;
+  }
+}
+
+.article .product-carousel {
+  padding-bottom: 30px;
+}
+.article .product-carousel div {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+}
+.article .product-carousel div img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article .product-title {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9ecef;
+}
+.article .product-title .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.article .product-title .title .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.article .product-title .title .text {
+  font-size: 15px;
+}
+.article .product-title .title .text .nickname {
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  color: #212529;
+}
+.article .product-title .title .text .nickname:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.article .product-title .title .text .region-name {
+  font-size: 13px;
+  line-height: 1.46;
+  letter-spacing: -0.6px;
+  color: #212529;
+}
+.article .product-desc {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+  border-bottom: 1px solid #eaebee;
+}
+.article .product-desc .desc-group h1 {
+  font-size: large;
+}
+.article .product-desc .desc-group span {
+  font-size: 13px;
+  color: #868e96;
+}
+.article .product-desc .desc-group p {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 12px 0px;
+}
+.article .product-desc span {
+  margin: 12px 0px;
+}
+.article .product-desc span:last-child {
+  font-size: 13px;
+  color: #868e96;
+}
+
+.temp .temp-grid-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.temp .temp-grid-top .temp-grid-right, .temp .temp-grid-top .temp-grid-left {
+  padding: 0px 8px;
+}
+.temp .temp-grid-top .temp-grid-left {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 7px;
+}
+.temp .temp-grid-top .temp-grid-left .temp-num {
+  color: #1561a9;
+  text-align: right;
+  font-weight: bolder;
+}
+.temp .temp-grid-top .temp-grid-left .temp-line, .temp .temp-grid-top .temp-grid-left .temp-sub-line {
+  height: 4px;
+  border-radius: 4px;
+}
+.temp .temp-grid-top .temp-grid-left .temp-line {
+  width: 100%;
+  background-color: #e9ecef;
+}
+.temp .temp-grid-top .temp-grid-left .temp-sub-line {
+  width: 36.9%;
+  background-color: #1561a9;
+}
+.temp .temp-grid-top .temp-grid-right {
+  color: #1561a9;
+}
+.temp .temp-grid-top .temp-grid-right svg {
+  width: 25px;
+  height: 25px;
+}
+.temp .temp-grid-bottom {
+  text-align: right;
+  font-size: 12px;
+  color: #868e96;
+  margin-top: 7px;
+}
+
+.popular-product {
+  padding: 30px 0px;
+}
+.popular-product .product-grid-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.popular-product .product-grid-top .title {
+  font-weight: bolder;
+  font-size: 18px;
+}
+.popular-product .product-grid-top .see-more a {
+  color: #ff8a3d;
+  font-size: 15px;
+}
+.popular-product .product-grid-bottom {
+  width: 100%;
+}
+@media only screen and (max-width: 433px) {
+  .popular-product .product-grid-bottom {
+    justify-content: center;
+  }
+}
+.popular-product .product-grid-bottom .card-top {
+  margin-right: 0px;
 }/*# sourceMappingURL=style.css.map */

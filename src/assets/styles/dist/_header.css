@@ -43,7 +43,7 @@
 }
 
 @media only screen and (max-width: 830px) {
-  .menu ul .menu-item {
+  .l-menu ul .menu-item {
     display: none;
   }
 }
@@ -111,6 +111,109 @@
 
 .m-header-container {
   border-top: 1px solid #eaebee;
-  height: 20vh;
   color: #fff;
+  transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+.m-menu ul {
+  width: 100%;
+  flex-direction: column;
+  gap: 0px;
+  margin: 0px;
+}
+.m-menu ul .menu-item :hover {
+  background-color: #f2f3f6;
+}
+.m-menu ul .menu-item a {
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 0px 15px 5%;
+  margin: 0px;
+}
+
+.m-ab-menu {
+  position: absolute;
+  top: 0;
+}
+
+.m-search-container {
+  padding: 15px 15px 0px 15px;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+.m-search-container .top-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.m-search-container .top-grid input {
+  line-height: 1.4;
+  font-size: 16px;
+  background-color: #f2f3f6;
+  box-sizing: border-box;
+  height: 2.5rem;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  color: #212124;
+  margin-right: 1rem;
+  width: 100%;
+}
+.m-search-container .top-grid input:focus-visible {
+  outline-offset: 0px;
+}
+.m-search-container .top-grid input:focus {
+  outline: none;
+}
+.m-search-container .top-grid span {
+  line-height: 1.36;
+  color: #212124;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.m-search-container .bottom-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  transform: translateY(-1.6rem);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.1s;
+  padding: 8px 0px;
+  box-sizing: border-box;
+}
+.m-search-container .bottom-grid .sug-title {
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 0;
+  padding-bottom: 0.4rem;
+  padding-left: 0;
+  color: #868b94;
+}
+.m-search-container .bottom-grid .sug-table ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.m-search-container .bottom-grid .sug-table ul li {
+  line-height: 1.4;
+  outline: 0;
+  margin: 0;
+  width: 50%;
+  padding: 16px 0;
+  border-bottom: 1px solid #eaebee;
+  cursor: pointer;
+  list-style: none;
+}
+.m-search-container .bottom-grid .sug-table ul li:last-child, .m-search-container .bottom-grid .sug-table ul li:nth-last-child(2) {
+  border-bottom: none;
+}
+.m-search-container .bottom-grid-show {
+  opacity: 1;
+  transform: translateY(0);
 }
