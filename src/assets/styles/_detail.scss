@@ -5,7 +5,7 @@
     width: 50%;
   }
   @media only screen and (max-width: 830px){
-    width: 80%;
+    width: 90%;
   }
 }
 .article{
@@ -29,6 +29,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border-bottom: 1px solid #e9ecef;
+    gap:12px;
     .title{
       display: flex;
       flex-direction: row;
@@ -165,10 +166,6 @@
   }
   .product-grid-bottom{
     width: 100%;
-    // justify-content: space-between;
-    @media only screen and (max-width: 433px){
-      justify-content: center;
-    }
     .card-top{
       margin-right: 0px;
     }

@@ -9,7 +9,7 @@
 }
 @media only screen and (max-width: 830px) {
   .product-container {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -32,6 +32,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid #e9ecef;
+  gap: 12px;
 }
 .article .product-title .title {
   display: flex;
@@ -158,11 +159,6 @@
 }
 .popular-product .product-grid-bottom {
   width: 100%;
-}
-@media only screen and (max-width: 433px) {
-  .popular-product .product-grid-bottom {
-    justify-content: center;
-  }
 }
 .popular-product .product-grid-bottom .card-top {
   margin-right: 0px;

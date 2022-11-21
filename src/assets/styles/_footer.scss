@@ -2,7 +2,7 @@
   border-top: 1px solid #eaebee;
 }
 .footer-grid{
-  width:80%;
+  width:100%;
   margin: auto;
   .grid-top{
     display: flex;
@@ -11,6 +11,7 @@
     justify-content:center;
     padding: 48px 0px;
     font-size: 15px;
+    text-transform: capitalize;
     .grid-left{
       display: flex;
       flex-direction: row;
@@ -74,8 +75,10 @@
           ul{
             display:flex;
             flex-direction: row;
+            flex-wrap: wrap;
             li{
               padding-right: 40px;
+              text-transform: capitalize;
             }
             
           }
@@ -114,13 +117,14 @@
           border-radius: 3px;
           cursor: pointer;
           select{
-            background-color: #ffffff;
-            padding-right:0.4rem;
+            background-color: transparent;
+            padding: 0px 30px 0px 5px;
             border: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            text-indent: 0.1rem;
-            cursor: pointer;
+           
+            
+
           }
           select:focus{
             outline: 0px;
@@ -145,6 +149,11 @@
         width:100%;
       }
 
+    }
+    .grid-top{
+      .grid-left{
+        flex-wrap: wrap;
+      }
     }
     .grid-bottom .grid-right{
       flex-wrap: wrap;

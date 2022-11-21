@@ -171,6 +171,7 @@
   color: #212124;
   white-space: nowrap;
   cursor: pointer;
+  text-transform: capitalize;
 }
 .m-search-container .bottom-grid {
   display: flex;
@@ -192,6 +193,7 @@
   padding-bottom: 0.4rem;
   padding-left: 0;
   color: #868b94;
+  text-transform: capitalize;
 }
 .m-search-container .bottom-grid .sug-table ul {
   width: 100%;
@@ -209,6 +211,7 @@
   border-bottom: 1px solid #eaebee;
   cursor: pointer;
   list-style: none;
+  text-transform: capitalize;
 }
 .m-search-container .bottom-grid .sug-table ul li:last-child, .m-search-container .bottom-grid .sug-table ul li:nth-last-child(2) {
   border-bottom: none;

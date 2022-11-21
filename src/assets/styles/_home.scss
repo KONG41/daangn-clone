@@ -28,6 +28,10 @@
       line-height: 1.3;
       letter-spacing: -0.4px;
       margin: 10px 0px;
+      text-transform: capitalize;
+      @media only screen and (max-width:830px){
+        font-size: 1.8rem;
+      }
     }
     .text-m{
       font-size: 15px !important;
@@ -68,6 +72,10 @@
       line-height: 1.3;
       letter-spacing: -0.4px;
       margin: 10px 0px;
+      text-transform: capitalize;
+      @media only screen and (max-width: 830px){
+        font-size: 1.8rem;
+      }
     }
     .text-m{
       font-size: 15px !important;
@@ -82,6 +90,16 @@
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 15px;
+  
+  @media only screen and (max-width: 830px){
+    justify-content: center;
+    .btn{
+      min-width:60%;
+      text-align: center;
+    }
+ 
+  }
+
   .btn{
     padding: 17px 25px ;
     background-color: #f2f3f6;
@@ -92,6 +110,8 @@
     display: flex;
     align-items: center;
     font-size: 18px;
+    text-transform: capitalize;
+    justify-content: center;
   }
   .btn:hover{
     cursor: pointer;
@@ -137,6 +157,10 @@
       font-size: 2.5rem;
       line-height: 1.35;
       text-align: center;
+      text-transform: capitalize;
+      @media only screen and (max-width: 830px){
+        font-size: 1.5rem;
+      }
     }
     .text-center{
       text-align: center;
@@ -154,10 +178,21 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    @media only screen and (max-width: 830px){
+      width: 100%;
+      
+    }
     .card-top{
       // width: calc(25% - 44px);
       margin-right: 44px;
       margin-bottom: 56px;
+      width: 180px;
+      @media only screen and (max-width: 830px){
+        margin-right: 0px;
+      }
+      @media only screen and (max-width: 475px){
+        width: 140px;
+      }
       .card-photo{
         width: 100%;
         padding-top: 100%;
@@ -245,15 +280,17 @@
     }
   }
   .top-keywords-list{
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     vertical-align: middle;
-    margin-left: 4rem;
+    
     .keyword-item{
       display: inline-block;
     vertical-align: middle;
     margin-right: 3.2rem;
     margin-bottom: 1rem;
+    text-transform: capitalize;
     .keyword-link{
       color: #212529;
     }
@@ -272,22 +309,25 @@
     align-items: center;
     .text{
       width: 100%;
+      text-align: center;
     }
     .image{
       width: 100%;
     }
     ul{
       flex-wrap: wrap;
+      display:none;
       li{
         margin-bottom: 37px;
       }
     }
   }
   .left-img{
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     .text{
       width: 100%;
+      text-align: center;
     }
     .image{
       width: 100%;

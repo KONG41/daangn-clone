@@ -3,7 +3,7 @@ import MainLayout from './components/MainLayout';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import './languages/i18n';
 
 function App() {
   return (
