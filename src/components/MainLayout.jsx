@@ -50,6 +50,12 @@ function MainLayout({ children }) {
   };
   //end of translate
 
+  //switch menu items
+  const handleClickMenu = (e) => {
+    document.getElementByClassName('menu1').classList.remove('main-menu-item');
+    document.getElementById(`${e.currentTarget.id}`).classList.add('main-menu-item');
+  }
+  //end of switch menu
   return (
     <div className="container">
       <section className="sticky-nav">
@@ -60,9 +66,9 @@ function MainLayout({ children }) {
                 <Link to="/"><img src={require("../assets/images/logo/logo_01.png")} /></Link>
 
               </li>
-              <li className="menu-item main-menu-item"><Link to="/">{t("중고거래")}</Link></li>
-              <li className="menu-item"><a href="#">{t('알바')}</a></li>
-              <li className="menu-item"><a href="#">{t('부동산 직거래')}</a></li>
+              <li className="menu-item main-menu-item" id="menu1" onClick={(e) => handleClickMenu(e)}><Link to="/">{t("중고거래")}</Link></li>
+              <li className="menu-item" id="menu2" onClick={(e) => handleClickMenu(e)}><a href="#" >{t('알바')}</a></li>
+              <li className="menu-item" id="menu3" onClick={(e) => handleClickMenu(e)}><a href="#" >{t('부동산 직거래')}</a></li>
             </ul>
           </div>
           <div className="search m-search">

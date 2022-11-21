@@ -17,7 +17,10 @@
       flex-direction: row;
       width: 50%;
       ul{
-        padding-right:40px ;
+        padding-right:40px;
+        @media screen and (max-width:830px){
+          padding-right:29px;
+        }
         li{
           margin-bottom:1.7rem;
         }

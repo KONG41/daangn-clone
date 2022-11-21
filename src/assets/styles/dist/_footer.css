@@ -23,6 +23,11 @@
 .footer-grid .grid-top .grid-left ul {
   padding-right: 40px;
 }
+@media screen and (max-width: 830px) {
+  .footer-grid .grid-top .grid-left ul {
+    padding-right: 29px;
+  }
+}
 .footer-grid .grid-top .grid-left ul li {
   margin-bottom: 1.7rem;
 }
