@@ -52,7 +52,14 @@ function MainLayout({ children }) {
 
   //switch menu items
   const handleClickMenu = (e) => {
-    document.getElementByClassName('menu1').classList.remove('main-menu-item');
+    const myMenu1 = document.getElementById('menu1');
+    const myMenu2 = document.getElementById('menu2');
+    const myMenu3 = document.getElementById('menu3');
+
+    myMenu1.classList.remove('main-menu-item');
+    myMenu2.classList.remove('main-menu-item');
+    myMenu3.classList.remove('main-menu-item');
+
     document.getElementById(`${e.currentTarget.id}`).classList.add('main-menu-item');
   }
   //end of switch menu
@@ -67,8 +74,8 @@ function MainLayout({ children }) {
 
               </li>
               <li className="menu-item main-menu-item" id="menu1" onClick={(e) => handleClickMenu(e)}><Link to="/">{t("중고거래")}</Link></li>
-              <li className="menu-item" id="menu2" onClick={(e) => handleClickMenu(e)}><a href="#" >{t('알바')}</a></li>
-              <li className="menu-item" id="menu3" onClick={(e) => handleClickMenu(e)}><a href="#" >{t('부동산 직거래')}</a></li>
+              <li className="menu-item" id="menu2" onClick={(e) => handleClickMenu(e)}><Link to="/job">{t('알바')}</Link></li>
+              <li className="menu-item" id="menu3" onClick={(e) => handleClickMenu(e)}><Link to="">{t('부동산 직거래')}</Link></li>
             </ul>
           </div>
           <div className="search m-search">
@@ -84,9 +91,9 @@ function MainLayout({ children }) {
           <div className="container m-header-container">
             <div className="menu m-menu">
               <ul>
-                <li className="menu-item main-menu-item"><a href="#">{t('중고거래')}</a></li>
-                <li className="menu-item"><a href="#">{t('알바')}</a></li>
-                <li className="menu-item"><a href="#">{t('부동산 직거래')}</a></li>
+                <li className="menu-item main-menu-item" id="menu1"><Link to="/">{t("중고거래")}</Link></li>
+                <li className="menu-item" id="menu2" ><a href="#" >{t('알바')}</a></li>
+                <li className="menu-item" id="menu3" ><a href="#" >{t('부동산 직거래')}</a></li>
               </ul>
             </div>
           </div>

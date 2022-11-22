@@ -34,6 +34,11 @@ h1 {
   }
 }
 
+.sub2-container {
+  max-width: 48rem;
+  margin: auto;
+}
+
 .footer-container {
   border-top: 1px solid #eaebee;
 }
@@ -228,6 +233,7 @@ h1 {
   color: #4d5159;
   font-style: normal;
   margin-right: 1rem;
+  text-transform: uppercase;
 }
 .menu ul .menu-item a:hover {
   color: #868b94;
@@ -933,4 +939,143 @@ h1 {
 }
 .popular-product .product-grid-bottom .card-top {
   margin-right: 0px;
+}
+
+.job-top {
+  background-color: #ffe2d2;
+}
+
+.job-bottom {
+  background-color: #fff;
+}
+
+.job-top, .job-bottom {
+  padding-left: 20px;
+}
+
+.job-cover {
+  display: flex;
+  flex-direction: row;
+  padding-top: 45px;
+}
+.job-cover .text, .job-cover .image {
+  width: 50%;
+}
+.job-cover .text {
+  padding-top: 10px;
+}
+.job-cover .text h1 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+.job-cover .text p {
+  font-size: 18px;
+}
+.job-cover .image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 160%;
+  margin-bottom: -5px;
+}
+
+.job-list {
+  width: 100%;
+  padding-top: 60px;
+}
+.job-list .section-title {
+  padding-bottom: 45px;
+}
+
+.grid-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-items .item {
+  flex-basis: 48%;
+  display: flex;
+  padding-bottom: 30px;
+}
+@media only screen and (max-width: 830px) {
+  .grid-items .item {
+    flex-basis: 100%;
+  }
+}
+.grid-items .item p {
+  margin: 0;
+}
+.grid-items .item .image {
+  min-width: 6.75rem;
+  min-height: 6.75rem;
+}
+.grid-items .item .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.grid-items .item .desc {
+  margin-left: 1rem;
+}
+.grid-items .item .desc .title {
+  font-weight: 600;
+  color: #4d5159;
+  margin-bottom: 4px;
+}
+.grid-items .item .desc .title-desc, .grid-items .item .desc .salary {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+.grid-items .item .desc .title-desc {
+  color: #868b94;
+  margin-bottom: 4px;
+}
+.grid-items .item .desc .salary {
+  color: #212124;
+  font-weight: 600;
+}
+.grid-items .item:last-child {
+  padding-bottom: 0px;
+}
+
+.ads-container {
+  max-height: 6rem;
+  background-color: rgba(255, 111, 15, 0.1411764706);
+  padding: 2rem;
+  border-radius: 0.7rem;
+}
+
+.ads-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ads-layout .icon-desc {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.ads-layout .icon-desc .icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.ads-layout .icon-desc .icon img {
+  width: 100%;
+}
+.ads-layout .icon-desc .desc {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.ads-layout .btn {
+  background-color: #ff6f0f;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.25rem;
+  line-height: 1.4;
+  font-size: 0.875rem;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+.job-top {
+  background-color: #ffe2d2;
+}
+
+.job-bottom {
+  background-color: #fff;
+}
+
+.job-top, .job-bottom {
+  padding-left: 20px;
+}
+
+.job-cover {
+  display: flex;
+  flex-direction: row;
+  padding-top: 45px;
+}
+.job-cover .text, .job-cover .image {
+  width: 50%;
+}
+.job-cover .text {
+  padding-top: 10px;
+}
+.job-cover .text h1 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+.job-cover .text p {
+  font-size: 18px;
+}
+.job-cover .image img {
+  object-fit: contain;
+  width: 160%;
+  margin-bottom: -5px;
+}
+
+.job-list {
+  width: 100%;
+  padding-top: 60px;
+}
+.job-list .section-title {
+  padding-bottom: 45px;
+}
