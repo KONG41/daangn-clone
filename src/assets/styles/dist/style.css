@@ -797,47 +797,6 @@ h1 {
   width: 100%;
   object-fit: cover;
 }
-.article .product-title {
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-bottom: 1px solid #e9ecef;
-  gap: 12px;
-}
-.article .product-title .title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-.article .product-title .title .profile {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.article .product-title .title .text {
-  font-size: 15px;
-}
-.article .product-title .title .text .nickname {
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.6px;
-  color: #212529;
-}
-.article .product-title .title .text .nickname:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-.article .product-title .title .text .region-name {
-  font-size: 13px;
-  line-height: 1.46;
-  letter-spacing: -0.6px;
-  color: #212529;
-}
 .article .product-desc {
   display: flex;
   flex-direction: column;
@@ -862,6 +821,48 @@ h1 {
 .article .product-desc span:last-child {
   font-size: 13px;
   color: #868e96;
+}
+
+.product-title {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9ecef;
+  gap: 12px;
+}
+.product-title .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.product-title .title .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product-title .title .text {
+  font-size: 15px;
+}
+.product-title .title .text .nickname {
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  color: #212529;
+}
+.product-title .title .text .nickname:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.product-title .title .text .region-name {
+  font-size: 13px;
+  line-height: 1.46;
+  letter-spacing: -0.6px;
+  color: #212529;
 }
 
 .temp .temp-grid-top {
@@ -944,10 +945,6 @@ h1 {
   background-color: #fff;
 }
 
-.job-top, .job-bottom {
-  padding-left: 20px;
-}
-
 .job-cover {
   display: flex;
   flex-direction: row;
@@ -971,15 +968,34 @@ h1 {
   width: 160%;
   margin-bottom: -5px;
 }
+@media only screen and (max-width: 830px) {
+  .job-cover {
+    flex-direction: column;
+  }
+  .job-cover .text {
+    width: 100%;
+  }
+  .job-cover .image {
+    width: 100%;
+  }
+  .job-cover .image img {
+    width: 100%;
+  }
+}
 
 .job-list {
   width: 100%;
-  padding-top: 45px;
+  padding-top: 60px;
 }
 .job-list .section-title {
   padding-bottom: 45px;
 }
 
+@media only screen and (max-width: 830px) {
+  .job-top .sub2-container, .job-bottom .sub2-container {
+    padding: 0 10px;
+  }
+}
 .grid-items {
   width: 100%;
   display: flex;
@@ -988,43 +1004,164 @@ h1 {
 }
 .grid-items .item {
   flex-basis: 48%;
-  display: flex;
-  padding-bottom: 30px;
 }
 @media only screen and (max-width: 830px) {
   .grid-items .item {
     flex-basis: 100%;
   }
 }
-.grid-items .item p {
+.grid-items .item a {
+  display: flex;
+  padding-bottom: 30px;
+  text-decoration: none;
+}
+.grid-items .item a p {
   margin: 0;
 }
-.grid-items .item .image {
+.grid-items .item a .image {
   min-width: 6.75rem;
   min-height: 6.75rem;
 }
-.grid-items .item .image img {
+.grid-items .item a .image img {
   width: 100%;
   border-radius: 10px;
 }
-.grid-items .item .desc {
+.grid-items .item a .desc {
   margin-left: 1rem;
 }
-.grid-items .item .desc .title {
+.grid-items .item a .desc .title {
   font-weight: 600;
   color: #4d5159;
   margin-bottom: 4px;
 }
-.grid-items .item .desc .title-desc, .grid-items .item .desc .salary {
+.grid-items .item a .desc .title-desc,
+.grid-items .item a .desc .salary {
   display: flex;
   gap: 10px;
   flex-wrap: nowrap;
 }
-.grid-items .item .desc .title-desc {
+.grid-items .item a .desc .title-desc {
   color: #868b94;
   margin-bottom: 4px;
 }
-.grid-items .item .desc .salary {
+.grid-items .item a .desc .salary {
   color: #212124;
   font-weight: 600;
+}
+.grid-items .item:last-child {
+  padding-bottom: 0px;
+}
+
+.ads-container {
+  max-height: 6rem;
+  padding: 2rem;
+  border-radius: 0.7rem;
+}
+@media only screen and (max-width: 830px) {
+  .ads-container {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+.ads-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 830px) {
+  .ads-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.ads-layout .icon-desc {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+@media only screen and (max-width: 462px) {
+  .ads-layout .icon-desc {
+    gap: 20px;
+  }
+}
+.ads-layout .icon-desc .icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 830px) {
+  .ads-layout .icon-desc .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: none;
+  }
+}
+.ads-layout .icon-desc .icon img {
+  width: 100%;
+}
+.ads-layout .icon-desc .desc {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.ads-layout .btn {
+  background-color: #ff6f0f;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.25rem;
+  line-height: 1.4;
+  font-size: 0.875rem;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.job-group h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #212124;
+  line-height: 1.5;
+}
+.job-group span {
+  color: #868b94;
+  font-size: 15px;
+}
+
+.job-desc div {
+  padding-top: 45px;
+  font-size: 17px;
+}
+.job-desc h2 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: #212124;
+}
+.job-desc p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.job-info li {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.job-info li svg {
+  font-size: 1.5rem;
+  margin-right: 25px;
+}
+.job-info li:first-child {
+  font-weight: bold;
+}
+
+.estate-top {
+  background-color: #d2edfa;
+}
+@media only screen and (max-width: 830px) {
+  .estate-top .sub2-container {
+    padding: 0 10px;
+  }
 }

@@ -1,0 +1,22 @@
+.estate-tag {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.estate-tag p {
+  color: #4d5159;
+}
+.estate-tag p:first-child {
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 10px;
+}
+
+.highlight-title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+}

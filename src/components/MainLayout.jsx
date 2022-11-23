@@ -75,7 +75,7 @@ function MainLayout({ children }) {
               </li>
               <li className="menu-item main-menu-item" id="menu1" onClick={(e) => handleClickMenu(e)}><Link to="/">{t("중고거래")}</Link></li>
               <li className="menu-item" id="menu2" onClick={(e) => handleClickMenu(e)}><Link to="/job">{t('알바')}</Link></li>
-              <li className="menu-item" id="menu3" onClick={(e) => handleClickMenu(e)}><Link to="">{t('부동산 직거래')}</Link></li>
+              <li className="menu-item" id="menu3" onClick={(e) => handleClickMenu(e)}><Link to="/real-estate">{t('부동산 직거래')}</Link></li>
             </ul>
           </div>
           <div className="search m-search">
@@ -92,8 +92,8 @@ function MainLayout({ children }) {
             <div className="menu m-menu">
               <ul>
                 <li className="menu-item main-menu-item" id="menu1"><Link to="/">{t("중고거래")}</Link></li>
-                <li className="menu-item" id="menu2" ><a href="#" >{t('알바')}</a></li>
-                <li className="menu-item" id="menu3" ><a href="#" >{t('부동산 직거래')}</a></li>
+                <li className="menu-item" id="menu2" ><Link to="/job" >{t('알바')}</Link></li>
+                <li className="menu-item" id="menu3" ><Link to="/real-estate" >{t('부동산 직거래')}</Link></li>
               </ul>
             </div>
           </div>

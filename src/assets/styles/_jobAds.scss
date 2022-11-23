@@ -1,20 +1,37 @@
 .ads-container{
   max-height: 6rem;
- background-color: #ff6f0f24;
  padding: 2rem;
  border-radius: .7rem;
+ @media only screen and (max-width: 830px){
+  padding: 1.5rem 0.5rem;
+ }
 }
 .ads-layout{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  @media only screen and (max-width: 830px){
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 10px;
+  }
   .icon-desc{
     display:flex;
     gap: 30px;
     align-items:center;
+    @media only screen and (max-width: 462px){
+      gap: 20px;
+    }
     .icon{
       width: 3.5rem;
       height: 3.5rem;
+      display: flex;
+      align-items: center;
+      @media only screen and (max-width: 830px){
+        width: 2.5rem;
+        height: 2.5rem;
+        display: none;
+      }
       img{
         width:100%;
       }
@@ -36,6 +53,7 @@
     margin: 0;
     color: #fff;
     cursor: pointer;
+
   }
   
  

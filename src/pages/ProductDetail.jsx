@@ -1,9 +1,10 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import { BsEmojiSmile } from 'react-icons/bs';
-import { TfiFaceSad } from 'react-icons/tfi';
+
+import Temperature from '../components/Temperature';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ProductGrid from '../components/ProductGrid';
 const ProductDetail = () => {
   const { t, i18n } = useTranslation();
   // const onChange = (currentSlide) => {
@@ -42,26 +43,7 @@ const ProductDetail = () => {
                 <div className="region-name">{t('당근이신가요')}</div>
               </span>
             </div>
-            <div className="temp">
-              <div className="temp-grid-top">
-                <div className="temp-grid-left">
-                  <div className="temp-num">36.9°C</div>
-                  <div className="temp-line">
-                    <div className="temp-sub-line"></div>
-                  </div>
-                </div>
-                <div className="temp-grid-right">
-                  <TfiFaceSad />
-                </div>
-              </div>
-              <div className="temp-grid-bottom">
-                <span>
-                  {t('매너온도')}
-                </span>
-              </div>
-            </div>
-
-
+            <Temperature />
           </div>
           <div className="product-desc">
             <div className="desc-group">
@@ -80,164 +62,7 @@ const ProductDetail = () => {
             <span className="title">{t('당근마켓 인기중고')}</span>
             <span className="see-more"><Link to="#">{t('더 구경하기')}</Link></span>
           </div>
-          <div className="product-grid-bottom cards-wrap">
-            <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
-                <div className="card-photo ">
-                  <img alt="iPhone 13 pro max 512G"
-                    src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
-                </div>
-                <div className="card-desc">
-                  <h2 className="card-title">iPhone 13 pro max 512G</h2>
-                  <div className="card-price ">
-                    100,000원
-                  </div>
-                  <div className="card-region-name">
-                    경남 창원시 성산구 반지동
-                  </div>
-                  <div className="card-counts">
-                    <span>
-                      관심 56
-                    </span>
-                    ∙
-                    <span>
-                      채팅 196
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
-                <div className="card-photo ">
-                  <img alt="iPhone 13 pro max 512G"
-                    src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
-                </div>
-                <div className="card-desc">
-                  <h2 className="card-title">iPhone 13 pro max 512G</h2>
-                  <div className="card-price ">
-                    100,000원
-                  </div>
-                  <div className="card-region-name">
-                    경남 창원시 성산구 반지동
-                  </div>
-                  <div className="card-counts">
-                    <span>
-                      관심 56
-                    </span>
-                    ∙
-                    <span>
-                      채팅 196
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
-                <div className="card-photo ">
-                  <img alt="iPhone 13 pro max 512G"
-                    src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
-                </div>
-                <div className="card-desc">
-                  <h2 className="card-title">iPhone 13 pro max 512G</h2>
-                  <div className="card-price ">
-                    100,000원
-                  </div>
-                  <div className="card-region-name">
-                    경남 창원시 성산구 반지동
-                  </div>
-                  <div className="card-counts">
-                    <span>
-                      관심 56
-                    </span>
-                    ∙
-                    <span>
-                      채팅 196
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
-                <div className="card-photo ">
-                  <img alt="iPhone 13 pro max 512G"
-                    src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
-                </div>
-                <div className="card-desc">
-                  <h2 className="card-title">iPhone 13 pro max 512G</h2>
-                  <div className="card-price ">
-                    {t('100,000원')}
-                  </div>
-                  <div className="card-region-name">
-                    {t('경남 창원시 성산구 반지동')}
-                  </div>
-                  <div className="card-counts">
-                    <span>
-                      {t('관심')} 56
-                    </span>
-                    ∙
-                    <span>
-                      {t('채팅')} 196
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
-                <div className="card-photo ">
-                  <img alt="iPhone 13 pro max 512G"
-                    src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
-                </div>
-                <div className="card-desc">
-                  <h2 className="card-title">iPhone 13 pro max 512G</h2>
-                  <div className="card-price ">
-                    100,000원
-                  </div>
-                  <div className="card-region-name">
-                    경남 창원시 성산구 반지동
-                  </div>
-                  <div className="card-counts">
-                    <span>
-                      관심 56
-                    </span>
-                    ∙
-                    <span>
-                      채팅 196
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article className="card-top ">
-              <a className="card-link " data-event-label="488826624" href="https://www.daangn.com/articles/488826624">
-                <div className="card-photo ">
-                  <img alt="iPhone 13 pro max 512G"
-                    src={require("../assets/images/content/C9C41F9112584A754BF96285113C883CABB3C75B0A35D1829B5242CA688FBC40.jpg")} />
-                </div>
-                <div className="card-desc">
-                  <h2 className="card-title">iPhone 13 pro max 512G</h2>
-                  <div className="card-price ">
-                    100,000원
-                  </div>
-                  <div className="card-region-name">
-                    경남 창원시 성산구 반지동
-                  </div>
-                  <div className="card-counts">
-                    <span>
-                      관심 56
-                    </span>
-                    ∙
-                    <span>
-                      채팅 196
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-          </div>
+          <ProductGrid />
         </section>
       </section>
     </section>

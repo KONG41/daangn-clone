@@ -6,10 +6,6 @@
   background-color: #fff;
 }
 
-.job-top, .job-bottom {
-  padding-left: 20px;
-}
-
 .job-cover {
   display: flex;
   flex-direction: row;
@@ -33,6 +29,20 @@
   width: 160%;
   margin-bottom: -5px;
 }
+@media only screen and (max-width: 830px) {
+  .job-cover {
+    flex-direction: column;
+  }
+  .job-cover .text {
+    width: 100%;
+  }
+  .job-cover .image {
+    width: 100%;
+  }
+  .job-cover .image img {
+    width: 100%;
+  }
+}
 
 .job-list {
   width: 100%;
@@ -40,4 +50,10 @@
 }
 .job-list .section-title {
   padding-bottom: 45px;
+}
+
+@media only screen and (max-width: 830px) {
+  .job-top .sub2-container, .job-bottom .sub2-container {
+    padding: 0 10px;
+  }
 }

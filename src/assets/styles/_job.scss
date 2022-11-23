@@ -4,13 +4,11 @@
 .job-bottom{
   background-color: #fff;
 }
-.job-top,.job-bottom{
-  padding-left: 20px;
-}
 .job-cover{
   display: flex;
   flex-direction: row;
   padding-top: 45px;
+  
   .text,.image{
     width: 50%;
   }
@@ -31,11 +29,30 @@
       margin-bottom:-5px;
     }
   }
+  @media only screen and (max-width: 830px){
+    flex-direction: column;
+    .text{
+      width: 100%;
+    }
+    .image{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
 }
 .job-list{
   width: 100%;
   padding-top: 60px;
   .section-title{
     padding-bottom: 45px;
+  }
+}
+@media only screen and (max-width: 830px){
+  .job-top,.job-bottom{
+    .sub2-container{
+      padding:0 10px;
+    }
   }
 }

@@ -25,47 +25,6 @@
   width: 100%;
   object-fit: cover;
 }
-.article .product-title {
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-bottom: 1px solid #e9ecef;
-  gap: 12px;
-}
-.article .product-title .title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-.article .product-title .title .profile {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.article .product-title .title .text {
-  font-size: 15px;
-}
-.article .product-title .title .text .nickname {
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: -0.6px;
-  color: #212529;
-}
-.article .product-title .title .text .nickname:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-.article .product-title .title .text .region-name {
-  font-size: 13px;
-  line-height: 1.46;
-  letter-spacing: -0.6px;
-  color: #212529;
-}
 .article .product-desc {
   display: flex;
   flex-direction: column;
@@ -90,6 +49,48 @@
 .article .product-desc span:last-child {
   font-size: 13px;
   color: #868e96;
+}
+
+.product-title {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9ecef;
+  gap: 12px;
+}
+.product-title .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.product-title .title .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product-title .title .text {
+  font-size: 15px;
+}
+.product-title .title .text .nickname {
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  color: #212529;
+}
+.product-title .title .text .nickname:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.product-title .title .text .region-name {
+  font-size: 13px;
+  line-height: 1.46;
+  letter-spacing: -0.6px;
+  color: #212529;
 }
 
 .temp .temp-grid-top {

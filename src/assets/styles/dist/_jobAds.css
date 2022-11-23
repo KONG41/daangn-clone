@@ -1,8 +1,12 @@
 .ads-container {
   max-height: 6rem;
-  background-color: #ff6f0f24;
   padding: 2rem;
   border-radius: 0.7rem;
+}
+@media only screen and (max-width: 830px) {
+  .ads-container {
+    padding: 1.5rem 0.5rem;
+  }
 }
 
 .ads-layout {
@@ -10,14 +14,35 @@
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 830px) {
+  .ads-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 .ads-layout .icon-desc {
   display: flex;
   gap: 30px;
   align-items: center;
 }
+@media only screen and (max-width: 462px) {
+  .ads-layout .icon-desc {
+    gap: 20px;
+  }
+}
 .ads-layout .icon-desc .icon {
   width: 3.5rem;
   height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 830px) {
+  .ads-layout .icon-desc .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: none;
+  }
 }
 .ads-layout .icon-desc .icon img {
   width: 100%;
