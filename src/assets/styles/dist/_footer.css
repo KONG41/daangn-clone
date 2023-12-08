@@ -3,7 +3,7 @@
 }
 
 .footer-grid {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 .footer-grid .grid-top {
@@ -13,6 +13,7 @@
   justify-content: center;
   padding: 48px 0px;
   font-size: 15px;
+  text-transform: capitalize;
 }
 .footer-grid .grid-top .grid-left {
   display: flex;
@@ -21,6 +22,11 @@
 }
 .footer-grid .grid-top .grid-left ul {
   padding-right: 40px;
+}
+@media screen and (max-width: 830px) {
+  .footer-grid .grid-top .grid-left ul {
+    padding-right: 29px;
+  }
 }
 .footer-grid .grid-top .grid-left ul li {
   margin-bottom: 1.7rem;
@@ -76,9 +82,11 @@
 .footer-grid .grid-bottom .grid-left .grid-2 ul, .footer-grid .grid-bottom .grid-left .grid-3 ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .footer-grid .grid-bottom .grid-left .grid-2 ul li, .footer-grid .grid-bottom .grid-left .grid-3 ul li {
   padding-right: 40px;
+  text-transform: capitalize;
 }
 .footer-grid .grid-bottom .grid-right {
   width: 30%;
@@ -112,13 +120,11 @@
   cursor: pointer;
 }
 .footer-grid .grid-bottom .grid-right .lang-select select {
-  background-color: #ffffff;
-  padding-right: 0.4rem;
+  background-color: transparent;
+  padding: 0px 30px 0px 5px;
   border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  text-indent: 0.1rem;
-  cursor: pointer;
 }
 .footer-grid .grid-bottom .grid-right .lang-select select:focus {
   outline: 0px;
@@ -137,6 +143,9 @@
   }
   .footer-grid .grid-top .grid-left, .footer-grid .grid-top .grid-right, .footer-grid .grid-bottom .grid-left, .footer-grid .grid-bottom .grid-right {
     width: 100%;
+  }
+  .footer-grid .grid-top .grid-left {
+    flex-wrap: wrap;
   }
   .footer-grid .grid-bottom .grid-right {
     flex-wrap: wrap;

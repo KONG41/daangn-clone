@@ -1,0 +1,51 @@
+.grid-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-items .item {
+  flex-basis: 48%;
+  display: flex;
+  padding-bottom: 30px;
+}
+@media only screen and (max-width: 830px) {
+  .grid-items .item {
+    flex-basis: 100%;
+  }
+}
+.grid-items .item p {
+  margin: 0;
+}
+.grid-items .item .image {
+  min-width: 6.75rem;
+  min-height: 6.75rem;
+}
+.grid-items .item .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.grid-items .item .desc {
+  margin-left: 1rem;
+}
+.grid-items .item .desc .title {
+  font-weight: 600;
+  color: #4d5159;
+  margin-bottom: 4px;
+}
+.grid-items .item .desc .title-desc, .grid-items .item .desc .salary {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+.grid-items .item .desc .title-desc {
+  color: #868b94;
+  margin-bottom: 4px;
+}
+.grid-items .item .desc .salary {
+  color: #212124;
+  font-weight: 600;
+}
+.grid-items .item:last-child {
+  padding-bottom: 0px;
+}

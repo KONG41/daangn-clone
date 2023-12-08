@@ -1,0 +1,36 @@
+.estate-tag {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.estate-tag p {
+  color: #4d5159;
+}
+.estate-tag p:first-child {
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 10px;
+}
+
+.job-group .title-highlight span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #212124;
+  line-height: 1.5;
+}
+.job-group .title-highlight span:first-child {
+  color: #ff6f0f;
+}
+
+.estate-info li {
+  display: list-item;
+  width: 100%;
+}
+.estate-info li span:first-child {
+  color: #868b94;
+  width: 8.7rem;
+  display: inline-block;
+}

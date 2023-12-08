@@ -1,0 +1,8 @@
+.estate-top {
+  background-color: #d2edfa;
+}
+@media only screen and (max-width: 830px) {
+  .estate-top .sub2-container {
+    padding: 0 10px;
+  }
+}
